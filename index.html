@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ⚠️ Meta Pixel Code यहाँ Paste करो (अपने Pixel ID के साथ) -->
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NITYA BOOK PUBLICATION · Handwriting Work</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#080d1a;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#fff;
+padding:20px;
+position:relative;
+overflow-x:hidden;
+}
+
+/* ============================================ */
+/* ===== ANIMATED BACKGROUND ===== */
+/* ============================================ */
+
+.bg-grid{
+position:fixed;
+inset:0;
+z-index:0;
+background-image:
+linear-gradient(rgba(56,189,248,0.07) 1px, transparent 1px),
+linear-gradient(90deg, rgba(56,189,248,0.07) 1px, transparent 1px);
+background-size:45px 45px;
+animation:gridMove 20s linear infinite;
+mask-image:radial-gradient(ellipse at center, #000 30%, transparent 80%);
+-webkit-mask-image:radial-gradient(ellipse at center, #000 30%, transparent 80%);
+}
+
+@keyframes gridMove{
+0%{background-position:0 0;}
+100%{background-position:45px 45px;}
+}
+
+.bg-orb{
+position:fixed;
+border-radius:50%;
+filter:blur(90px);
+opacity:0.35;
+z-index:0;
+pointer-events:none;
+animation:orbFloat 15s ease-in-out infinite;
+}
+
+.orb-1{width:320px;height:320px;background:#38bdf8;top:-100px;left:-100px;animation-delay:0s;}
+.orb-2{width:280px;height:280px;background:#a855f7;bottom:-100px;right:-80px;animation-delay:-5s;}
+.orb-3{width:240px;height:240px;background:#22c55e;top:45%;right:-80px;animation-delay:-10s;}
+.orb-4{width:220px;height:220px;background:#fbbf24;bottom:15%;left:-70px;animation-delay:-7s;}
+
+@keyframes orbFloat{
+0%,100%{transform:translate(0,0) scale(1);}
+33%{transform:translate(30px,-40px) scale(1.1);}
+66%{transform:translate(-25px,30px) scale(0.95);}
+}
+
+.bg-dots{
+position:fixed;
+inset:0;
+z-index:0;
+background-image:radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+background-size:30px 30px;
+opacity:0.15;
+pointer-events:none;
+}
+
+.bg-vignette{
+position:fixed;
+inset:0;
+z-index:1;
+background:radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%);
+pointer-events:none;
+}
+
+/* ============================================ */
+
+.container{
+position:relative;
+z-index:2;
+width:95%;
+max-width:420px;
+padding:30px 25px;
+border-radius:18px;
+
+background:rgba(15,23,42,0.65);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(56,189,248,0.05) inset;
+text-align:center;
+}
+
+/* LOGO */
+
+.logo{
+width:80px;
+height:80px;
+border-radius:50%;
+border:2px solid #FFD700;
+margin-bottom:12px;
+object-fit:cover;
+box-shadow:0 0 25px rgba(255,215,0,0.3);
+}
+
+/* TEXT */
+
+h1{
+font-size:18px;
+color:#FFD700;
+margin-bottom:8px;
+letter-spacing:0.5px;
+line-height:1.4;
+text-shadow:0 0 20px rgba(255,215,0,0.3);
+}
+
+h2{
+font-size:14px;
+opacity:0.9;
+margin-bottom:10px;
+letter-spacing:0.5px;
+}
+
+.sub{
+font-size:13px;
+opacity:0.7;
+margin-bottom:18px;
+}
+
+/* BUTTON */
+
+.btn{
+display:block;
+text-decoration:none;
+background:#22c55e;
+color:#000;
+font-weight:700;
+padding:16px;
+border-radius:10px;
+margin:12px 0;
+transition:0.3s;
+box-shadow:0 8px 25px rgba(34,197,94,0.3);
+}
+
+.btn:hover{
+background:#16a34a;
+transform:scale(1.03);
+box-shadow:0 12px 35px rgba(34,197,94,0.5);
+}
+
+/* TRUST BOX */
+
+.trust{
+background:rgba(0,255,150,0.08);
+padding:10px;
+border-radius:10px;
+font-size:13px;
+margin-bottom:15px;
+border:1px solid rgba(0,255,150,0.2);
+}
+
+/* LIST */
+
+.points{
+list-style:none;
+font-size:14px;
+text-align:left;
+margin:15px 0;
+}
+
+.points li{
+margin:8px 0;
+}
+
+/* URGENCY */
+
+.timer{
+margin-top:10px;
+font-size:13px;
+color:#facc15;
+}
+
+/* SOCIAL PROOF */
+
+.proof{
+margin-top:12px;
+font-size:12px;
+opacity:0.7;
+}
+
+/* RISK */
+
+.risk{
+margin-top:10px;
+font-size:11px;
+opacity:0.5;
+}
+
+/* ============================================ */
+/* ===== MINI AGENCY BUTTON ===== */
+/* ============================================ */
+
+.agency-section{
+margin-top:16px;
+padding-top:14px;
+border-top:1px solid rgba(255,255,255,0.06);
+text-align:center;
+}
+
+.agency-btn{
+display:inline-block;
+padding:5px 12px;
+border-radius:30px;
+text-decoration:none;
+font-size:9.5px;
+font-weight:500;
+color:#7a8ba3;
+letter-spacing:0.2px;
+
+background:rgba(15,23,42,0.6);
+border:1px solid rgba(255,255,255,0.06);
+
+transition:all 0.3s ease;
+}
+
+.agency-btn:hover{
+color:#fff;
+border-color:rgba(56,189,248,0.4);
+background:rgba(56,189,248,0.08);
+}
+
+.agency-btn:active{
+transform:scale(0.95);
+}
+
+.agency-btn .brand{
+font-weight:700;
+background:linear-gradient(135deg, #38bdf8, #a855f7);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+background-clip:text;
+}
+
+/* ============================================ */
+/* ===== MOBILE RESPONSIVE ===== */
+/* ============================================ */
+
+@media (max-width:400px){
+h1{font-size:16px;}
+.logo{width:70px;height:70px;}
+.container{padding:26px 18px;border-radius:16px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== ANIMATED BACKGROUND ===== -->
+<div class="bg-grid"></div>
+<div class="bg-orb orb-1"></div>
+<div class="bg-orb orb-2"></div>
+<div class="bg-orb orb-3"></div>
+<div class="bg-orb orb-4"></div>
+<div class="bg-dots"></div>
+<div class="bg-vignette"></div>
+
+<!-- ===== MAIN CARD ===== -->
+<div class="container">
+
+<img src="https://i.ibb.co/4gX4JKHH/VShj-Ae2z3tq-BHAm-m3y-G4nu-TWF3zzancpfnh-OKVys-Ku-NS3l0t-G2nzxk-Eo-P1-PD60m-O-3-Vr-YY1-Fz-A-d-MKDRW8b-F.jpg" class="logo" alt="NITYA BOOK PUBLICATION">
+
+<h1>NITYA BOOK PUBLICATION</h1>
+<h2>✍️ HANDWRITING WORK FROM HOME</h2>
+
+<p class="sub">
+Earn from Home with Handwriting Jobs
+</p>
+
+<!-- TOP BUTTON -->
+<a href="https://t.me/+neIUUGe9_XkwZDNl" class="btn">
+🚀 Join Free Telegram Channel
+</a>
+
+<div class="trust">
+✔ Trusted by 5,000+ Writers <br>
+✔ Daily Work Opportunities
+</div>
+
+<ul class="points">
+<li>✔ Handwriting Jobs (No Experience)</li>
+<li>✔ Flexible Working Hours</li>
+<li>✔ Payment Guidance Provided</li>
+<li>✔ Mobile / Laptop Required</li>
+</ul>
+
+<!-- BOTTOM BUTTON -->
+<a href="https://t.me/+neIUUGe9_XkwZDNl" class="btn">
+🚀 Join Free Telegram Channel
+</a>
+
+<div class="timer">
+⏳ Free Access Closing Soon
+</div>
+
+<div class="proof">
+📈 Limited Seats • Active Community
+</div>
+
+<p class="risk">
+⚠ Work from home opportunity — no investment required
+</p>
+
+<!-- ===== MINI AGENCY BUTTON ===== -->
+<div class="agency-section">
+<a href="https://t.me/+CKzXLc93ze44MTdl" class="agency-btn" target="_blank" rel="noopener">
+⚡ Ads by <span class="brand">@amitgrowthagency</span>
+</a>
+</div>
+
+</div>
+
+</body>
+</html>
